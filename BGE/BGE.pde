@@ -22,6 +22,7 @@ int cSelect;
 
 String imputText = "";
 
+
 void setup(){
 
   size(1280,720,P3D);
@@ -41,13 +42,25 @@ void setup(){
   cAngle = 55; 
   cSelect = 19;
   
-  tileNum = 36; //36 Circulo entero
+  tileNum = 72; //36 Circulo entero
   
   Tiles = new tile[tileNum];
-  chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; //36 chars
+  //chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; //36 chars
+  chars = "STUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQR"; //72 chars
+
   
   fuenteBGE = createFont("DesdemonaBlackRegular.otf", 40);
-
+  
+    z=initZ;
+  angle=initAngle;
+  
+  for(int i = 0;i < tileNum; i++){
+    
+    Tiles[i] = new tile(z,angle,r,Character.toString(chars.charAt( i )),fuenteBGE, initAngle);
+    angle -= 15;
+    z -= 15;
+  }
+  
 }
 
 void draw(){
@@ -65,38 +78,11 @@ void draw(){
   circle(cx,cy,500);
   
   //---------------------------------------Tile Generation----------------------------------------------
-  z=initZ;
-  angle=initAngle;
   
   for(int i = 0;i < tileNum; i++){
     
-    Tiles[i] = new tile(z,angle,r,Character.toString(chars.charAt( i )),fuenteBGE, initAngle);
-    //Tiles[i].show();
-    angle -= 15;
-    z -= 15;
-  }
-  
-  if(Tiles[35].z == 15){
-    
-    Tiles[0].z = Tiles[35].z-15;
-    Tiles[0].angle = Tiles[35].angle-(15 * (PI/180));
-    
-    println("-------------------------------------");  
-    println("Tile 35 z = " + Tiles[35].z);
-    println("Tile 35 angle = " + Tiles[35].angle);
-    
-    println("Tile 0 z = " + Tiles[0].z);
-    println("Tile 0 angle = " + Tiles[0].angle);
-    println("-------------------------------------");
-  
-  }
-    
-  for(int i = 0;i < tileNum; i++){
-    
-    //Tiles[i] = new tile(z,angle,r,Character.toString(chars.charAt( i )),fuenteBGE, initAngle);
     Tiles[i].show();
-    //angle -= 15;
-    //z -= 15;
+    
   }
   
   cursor();
@@ -109,11 +95,6 @@ void draw(){
   text(imputText,cx-((20*imputText.length()/2)),cy);
   
   //---------------------------------------Spiral Loop----------------------------------------------
-  
-
-  
-  //println("Z 35 = " + Tiles[35].z);
-
 
 
 }
@@ -124,23 +105,41 @@ void keyPressed(){
     case KeyEvent.VK_RIGHT: 
       println("RIGHT:" + keyCode); 
       if(cSelect > 0){
-        initZ -= 15;
+        
+        for(int i = 0; i < tileNum; i++){
+        
+          Tiles[i].moveDown(1);
+        
+        }
+        
+        //initZ -= 15;
         cAngle -= 15;
         cSelect--;
       }
       break;
     case KeyEvent.VK_LEFT: 
       println("LEFT:" + keyCode);
-      if(cSelect < 35){
-        initZ += 15;
+      
+      if(cSelect < tileNum-1){
+        
+        for(int i = 0; i < tileNum; i++){
+        
+          Tiles[i].moveUp(1);
+        
+        }
+        
+        //initZ += 15;
         cAngle += 15;
         cSelect++;
       }
       break;
+      
     case KeyEvent.VK_ENTER: 
       println("ENTER:" + keyCode);
       imputText = imputText + Character.toString(chars.charAt(cSelect));
       println(Character.toString(chars.charAt(cSelect)));
+      println("Tile num = " + cSelect);
+
       break;
 
   }

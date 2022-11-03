@@ -89,8 +89,39 @@ class tile{
       textFont(fuenteBGE);
       text(c,x-10,y+10,z);
       
-  
   }
+  
+  void moveUp(int times){
+    
+    if(times != 1){
+    
+      this.z += 15 * times;
+      this.angle += ((15 * times)*PI/180);
+      
+    }else{
+    
+       this.z += 15 * times;
+
+      
+    }
+
+
+
+  }
+  
+  void moveDown(int times){
+    
+    if(times != 1){
+      this.z -= 15 * times;
+      this.angle -= ((15 * times)*PI/180);
+    }else{
+      this.z -= 15 * times;
+    }
+  
+
+
+  }
+  
 
 
 }
