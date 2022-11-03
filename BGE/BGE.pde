@@ -55,9 +55,9 @@ void draw(){
   background(0);
   
     
-  //strokeWeight(10);
-  //stroke(255,0,0);
-  //point(cx,cy);
+  strokeWeight(10);
+  stroke(255,0,0);
+  point(cx,cy);
   
   stroke(255);
   strokeWeight(5);
@@ -67,15 +67,36 @@ void draw(){
   //---------------------------------------Tile Generation----------------------------------------------
   z=initZ;
   angle=initAngle;
-
-    
+  
   for(int i = 0;i < tileNum; i++){
     
     Tiles[i] = new tile(z,angle,r,Character.toString(chars.charAt( i )),fuenteBGE, initAngle);
-    Tiles[i].show();
+    //Tiles[i].show();
     angle -= 15;
     z -= 15;
-
+  }
+  
+  if(Tiles[35].z == 15){
+    
+    Tiles[0].z = Tiles[35].z-15;
+    Tiles[0].angle = Tiles[35].angle-(15 * (PI/180));
+    
+    println("-------------------------------------");  
+    println("Tile 35 z = " + Tiles[35].z);
+    println("Tile 35 angle = " + Tiles[35].angle);
+    
+    println("Tile 0 z = " + Tiles[0].z);
+    println("Tile 0 angle = " + Tiles[0].angle);
+    println("-------------------------------------");
+  
+  }
+    
+  for(int i = 0;i < tileNum; i++){
+    
+    //Tiles[i] = new tile(z,angle,r,Character.toString(chars.charAt( i )),fuenteBGE, initAngle);
+    Tiles[i].show();
+    //angle -= 15;
+    //z -= 15;
   }
   
   cursor();
@@ -86,6 +107,12 @@ void draw(){
   textSize(40);
   textFont(fuenteBGE);
   text(imputText,cx-((20*imputText.length()/2)),cy);
+  
+  //---------------------------------------Spiral Loop----------------------------------------------
+  
+
+  
+  //println("Z 35 = " + Tiles[35].z);
 
 
 
