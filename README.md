@@ -18,7 +18,7 @@ This is a simple cubic form terrain generator based in the Perlin Noise texture.
 
 The dark sides are deeper parts of the terrain and the ligh sides are higher parts. 
 
-<h align="center">| Darker --> Deeper | Ligher --> Higher |  </h>
+<h>| Darker --> Deeper | Ligher --> Higher |  </h>
 
 <p align="center">
     <img width="200" height="200" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/PerlinNoise2d.png">
