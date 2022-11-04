@@ -16,8 +16,11 @@ This is a collection of my processing proyects
 
 This is a simple cubic form terrain generator based in the Perlin Noise texture.
 <p align="center">
-    <img width="300" height="300" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/PerlinNoise2d.png">
+    <img width="200" height="200" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/PerlinNoise2d.png">
 </p>
+The dark sides are deeper parts of the terrain and the ligh sides are higher parts. 
+| Darker --> Deeper | Ligher --> Higher |  
+
 It creates watter bodies and trees 
 
 
