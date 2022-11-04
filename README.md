@@ -11,7 +11,7 @@ This is a collection of my processing proyects
    
 # Cubes
 <p align="center">
-![CubesGif](https://user-images.githubusercontent.com/92734840/200025546-d89cc9a0-0661-4a64-b1da-c256c08d4c59.gif)
+  ![CubesGif](https://user-images.githubusercontent.com/92734840/200025546-d89cc9a0-0661-4a64-b1da-c256c08d4c59.gif)
 </p>
 
 
