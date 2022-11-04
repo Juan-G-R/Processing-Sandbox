@@ -1,2 +1,4 @@
 # Processing-Sandbox
-![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
+   <p align="left">
+   <img src="https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-green">
+   </p>
