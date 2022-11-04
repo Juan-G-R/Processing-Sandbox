@@ -1,5 +1,7 @@
 # Processing-Sandbox
 
+This is a collection of my processing proyects 
+
 ## Índice
    * [STATUS](#Status)
 
