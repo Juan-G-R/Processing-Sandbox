@@ -22,7 +22,7 @@ The dark sides are deeper parts of the terrain and the ligh sides are higher par
 
 <h>| Darker --> Deeper | Ligher --> Higher |  </h>
 
-It creates watter bodies and trees 
+It creates watter bodies and trees. This works setting a random value between 0-200 and if the value is 1 a tree will show up. (Se comments in code)
 
 
 
