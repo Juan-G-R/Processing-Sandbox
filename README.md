@@ -11,8 +11,7 @@ This is a collection of my processing proyects
    
 # Cubes
 <p align="center">
-    <img width="460" height="300" src="https://user-images.githubusercontent.com/92734840/200025988-b6d5b589-a744-40bf-aa7f-7e32eb7557b8.gif">
-  ![gifgit](https://user-images.githubusercontent.com/92734840/200025988-b6d5b589-a744-40bf-aa7f-7e32eb7557b8.gif)
+    <img width="300" height="300" src="https://user-images.githubusercontent.com/92734840/200025988-b6d5b589-a744-40bf-aa7f-7e32eb7557b8.gif">
 </p>
 
 
