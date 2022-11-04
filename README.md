@@ -4,7 +4,7 @@
 
 # Processing-Sandbox
 
-This is a collection of my processing proyects 
+This is a collection of my processing projects 
 
 ## Index
    * [Cubes](#Cubes)
